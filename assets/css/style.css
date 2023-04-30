@@ -315,4 +315,25 @@ a:visited {
       height: 100%;
       object-fit: cover; }
 
+.quote-block {
+  position: relative; }
+  .quote-block .quote__image {
+    position: relative; }
+    .quote-block .quote__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .quote-block .quote__text {
+    width: 40%;
+    color: #FFFFFF;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 1;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */

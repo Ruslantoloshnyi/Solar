@@ -326,7 +326,7 @@ a:visited {
 
     @include _979() {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
     }
 
     .green-tariff-content-block {
@@ -343,7 +343,7 @@ a:visited {
 
             .green-tariff-content-slider__image {
                 width: 47%;
-                
+
                 img {
                     @include img_cover();
                 }
@@ -480,4 +480,33 @@ a:visited {
         }
 
     }
+}
+
+// Qoute section style
+.quote-block {
+    position: relative;
+
+    .quote__image {
+        position: relative;
+
+        img {
+            @include img_cover();
+        }
+
+    }
+
+    .quote__text {
+        width: 40%;
+        color: #FFFFFF;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        z-index: 1;
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3vw;
+        text-align: center;
+    }
+
 }
