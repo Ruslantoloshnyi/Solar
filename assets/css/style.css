@@ -189,7 +189,10 @@ a:visited {
 .green-tariff-content {
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  color: #303030; }
   @media (max-width: 979px) {
     .green-tariff-content {
       display: flex;

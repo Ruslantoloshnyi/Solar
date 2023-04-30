@@ -322,6 +322,8 @@ a:visited {
     justify-content: space-between;
     width: 100%;
 
+    @include font();
+
     @include _979() {
         display: flex;
         flex-direction: column;        
