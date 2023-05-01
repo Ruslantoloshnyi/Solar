@@ -474,4 +474,40 @@ a:visited {
       .clients-section-block .clients-content .clients-content-consultation-form .clients-content-consultation-form__button:hover {
         background-color: #A9A32A; }
 
+.steps-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  @media (max-width: 979px) {
+    .steps-content {
+      display: flex;
+      flex-direction: column; } }
+  .steps-content .steps-content-block {
+    width: 47%;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    color: #303030; }
+    @media (max-width: 979px) {
+      .steps-content .steps-content-block {
+        width: 100%; } }
+    .steps-content .steps-content-block .steps-content__text {
+      margin-bottom: 50px; }
+      .steps-content .steps-content-block .steps-content__text h2 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px; }
+      .steps-content .steps-content-block .steps-content__text p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px; }
+  .steps-content .steps__image {
+    width: 47%; }
+    @media (max-width: 979px) {
+      .steps-content .steps__image {
+        width: 100%; } }
+    .steps-content .steps__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
 /*# sourceMappingURL=style.css.map */

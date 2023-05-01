@@ -692,3 +692,51 @@ a:visited {
         }
     }
 }
+
+//Steps section style
+.steps-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include _979() {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .steps-content-block {
+        width: 47%;
+        @include font();
+
+        @include _979() {
+            width: 100%;
+        }
+
+        .steps-content__text {
+            margin-bottom: 50px;
+
+            h2 {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            p {
+                @include font_text();
+            }
+        }
+    }
+
+    .steps__image {
+        width: 47%;
+
+        @include _979() {
+            width: 100%;
+        }
+
+        img {
+            @include img_cover();
+        }
+
+    }
+}
