@@ -19,6 +19,12 @@ a:visited {
 
 .wrapper {
   margin-top: 150px; }
+  @media (max-width: 768px) {
+    .wrapper {
+      margin-top: 100px; } }
+  @media (max-width: 480px) {
+    .wrapper {
+      margin-top: 70px; } }
 
 .header {
   background-image: url("../image/background.jpg");
@@ -90,14 +96,21 @@ a:visited {
   flex-direction: column;
   align-items: center; }
   .header-consultation-form input {
-    background-color: darkgray;
+    background-color: rgba(28, 28, 28, 0);
     color: #FFFFFF;
     border: none;
+    border-bottom: 1px solid #FFFFFF;
     margin-bottom: 5px; }
     .header-consultation-form input:focus {
       outline: none; }
-  .header-consultation-form .header-consultation-form__button:hover {
-    background-color: #A9A32A; }
+    .header-consultation-form input::placeholder {
+      color: #c2baba; }
+  .header-consultation-form .header-consultation-form__button {
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+    border-radius: 10%; }
+    .header-consultation-form .header-consultation-form__button:hover {
+      background-color: #A9A32A; }
 
 .header-socials {
   display: flex;
@@ -162,7 +175,13 @@ a:visited {
   .green-tariff-subhead .green-tariff__link {
     display: flex;
     justify-content: space-evenly;
-    width: 47%; }
+    width: 47%;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #303030; }
     @media (max-width: 979px) {
       .green-tariff-subhead .green-tariff__link {
         width: 100%;
@@ -170,15 +189,10 @@ a:visited {
     @media (max-width: 480px) {
       .green-tariff-subhead .green-tariff__link {
         justify-content: space-between; } }
-    .green-tariff-subhead .green-tariff__link a {
-      font-family: 'Noto Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 25px;
-      color: #303030; }
+    .green-tariff-subhead .green-tariff__link p {
+      cursor: pointer; }
       @media (max-width: 480px) {
-        .green-tariff-subhead .green-tariff__link a {
+        .green-tariff-subhead .green-tariff__link p {
           font-size: 16px; } }
   .green-tariff-subhead .green-tariff__text {
     margin-bottom: 15px;
@@ -240,7 +254,7 @@ a:visited {
               position: relative;
               width: 30px;
               height: 1px;
-              background-color: #000000;
+              background-color: #303030;
               left: 0;
               display: block; }
               .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow .arrow_right-pointer .arrow_right::before {
@@ -250,7 +264,7 @@ a:visited {
                 height: 1px;
                 top: 2.4px;
                 right: -1px;
-                background-color: #000000;
+                background-color: #303030;
                 transform: rotate(-45deg); }
               .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow .arrow_right-pointer .arrow_right::after {
                 content: '';
@@ -259,7 +273,7 @@ a:visited {
                 height: 1px;
                 top: -2.4px;
                 right: -1px;
-                background-color: #000000;
+                background-color: #303030;
                 transform: rotate(45deg); }
           .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow .arrow_left-pointer {
             display: flex;
@@ -271,7 +285,7 @@ a:visited {
               position: relative;
               width: 30px;
               height: 1px;
-              background-color: #000000;
+              background-color: #303030;
               left: 0;
               display: block; }
               .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow .arrow_left-pointer .arrow_left::before {
@@ -281,7 +295,7 @@ a:visited {
                 height: 1px;
                 top: 2.4px;
                 right: 23px;
-                background-color: #000000;
+                background-color: #303030;
                 transform: rotate(45deg); }
               .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow .arrow_left-pointer .arrow_left::after {
                 content: '';
@@ -290,7 +304,7 @@ a:visited {
                 height: 1px;
                 top: -2.4px;
                 right: 23px;
-                background-color: #000000;
+                background-color: #303030;
                 transform: rotate(-45deg); }
     .green-tariff-content .green-tariff-content-block .green-tariff-content__text {
       display: flex;
@@ -376,7 +390,7 @@ a:visited {
           position: relative;
           width: 30px;
           height: 1px;
-          background-color: #000000;
+          background-color: #303030;
           left: 0;
           display: block; }
           .clients-section-block .clietns-slider .clients-slider__arrow .arrow_right-pointer .arrow_right::before {
@@ -386,7 +400,7 @@ a:visited {
             height: 1px;
             top: 2.4px;
             right: -1px;
-            background-color: #000000;
+            background-color: #303030;
             transform: rotate(-45deg); }
           .clients-section-block .clietns-slider .clients-slider__arrow .arrow_right-pointer .arrow_right::after {
             content: '';
@@ -395,7 +409,7 @@ a:visited {
             height: 1px;
             top: -2.4px;
             right: -1px;
-            background-color: #000000;
+            background-color: #303030;
             transform: rotate(45deg); }
       .clients-section-block .clietns-slider .clients-slider__arrow .arrow_left-pointer {
         display: flex;
@@ -407,7 +421,7 @@ a:visited {
           position: relative;
           width: 30px;
           height: 1px;
-          background-color: #000000;
+          background-color: #303030;
           left: 0;
           display: block; }
           .clients-section-block .clietns-slider .clients-slider__arrow .arrow_left-pointer .arrow_left::before {
@@ -417,7 +431,7 @@ a:visited {
             height: 1px;
             top: 2.4px;
             right: 23px;
-            background-color: #000000;
+            background-color: #303030;
             transform: rotate(45deg); }
           .clients-section-block .clietns-slider .clients-slider__arrow .arrow_left-pointer .arrow_left::after {
             content: '';
@@ -426,7 +440,7 @@ a:visited {
             height: 1px;
             top: -2.4px;
             right: 23px;
-            background-color: #000000;
+            background-color: #303030;
             transform: rotate(-45deg); }
   .clients-section-block .clients-content {
     font-family: 'Noto Sans';
@@ -469,14 +483,19 @@ a:visited {
       flex-direction: column;
       align-items: center; }
       .clients-section-block .clients-content .clients-content-consultation-form input {
-        background-color: darkgray;
-        color: #FFFFFF;
+        background-color: rgba(28, 28, 28, 0);
+        color: #303030;
         border: none;
+        border-bottom: 1px solid #303030;
         margin-bottom: 5px; }
         .clients-section-block .clients-content .clients-content-consultation-form input:focus {
           outline: none; }
-      .clients-section-block .clients-content .clients-content-consultation-form .clients-content-consultation-form__button:hover {
-        background-color: #A9A32A; }
+      .clients-section-block .clients-content .clients-content-consultation-form .clients-content-consultation-form__button {
+        border: 1px solid #303030;
+        padding: 5px;
+        border-radius: 10%; }
+        .clients-section-block .clients-content .clients-content-consultation-form .clients-content-consultation-form__button:hover {
+          background-color: #A9A32A; }
 
 .steps-content {
   display: flex;

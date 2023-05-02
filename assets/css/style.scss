@@ -92,6 +92,14 @@ a:visited {
 
 .wrapper {
     margin-top: 150px;
+
+    @include _768() {
+        margin-top: 100px;
+    }
+
+    @include _480() {
+        margin-top: 70px;
+    }
 }
 
 // header style
@@ -99,7 +107,6 @@ a:visited {
     background-image: url("../image/background.jpg");
     background-size: cover;
     height: 100vh;
-
 }
 
 .header-container {
@@ -177,6 +184,7 @@ a:visited {
         &:hover {
             background-color: #A9A32A;
         }
+
     }
 
     .header-show-form_text {
@@ -191,17 +199,26 @@ a:visited {
     align-items: center;
 
     input {
-        background-color: darkgray;
+        background-color: rgba(28, 28, 28, 0);
         color: #FFFFFF;
         border: none;
+        border-bottom: 1px solid #FFFFFF;
         margin-bottom: 5px;
 
         &:focus {
             outline: none;
         }
+
+        &::placeholder {
+            color: #c2baba;
+        }
     }
 
     .header-consultation-form__button {
+        border: 1px solid #FFFFFF;
+        padding: 5px;
+        border-radius: 10%;
+
         &:hover {
             background-color: #A9A32A;
         }
@@ -288,6 +305,12 @@ a:visited {
         display: flex;
         justify-content: space-evenly;
         width: 47%;
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #303030;
 
         @include _979() {
             width: 100%;
@@ -298,13 +321,8 @@ a:visited {
             justify-content: space-between;
         }
 
-        a {
-            font-family: 'Noto Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 25px;
-            color: #303030;
+        p {
+            cursor: pointer;            
 
             @include _480() {
                 font-size: 16px;
@@ -379,7 +397,7 @@ a:visited {
                             position: relative;
                             width: 30px;
                             height: 1px;
-                            background-color: #000000;
+                            background-color: #303030;
                             left: 0;
                             display: block;
 
@@ -390,7 +408,7 @@ a:visited {
                                 height: 1px;
                                 top: 2.4px;
                                 right: -1px;
-                                background-color: #000000;
+                                background-color: #303030;
                                 transform: rotate(-45deg);
                             }
 
@@ -401,9 +419,10 @@ a:visited {
                                 height: 1px;
                                 top: -2.4px;
                                 right: -1px;
-                                background-color: #000000;
+                                background-color: #303030;
                                 transform: rotate(45deg);
                             }
+                           
                         }
                     }
 
@@ -418,7 +437,7 @@ a:visited {
                             position: relative;
                             width: 30px;
                             height: 1px;
-                            background-color: #000000;
+                            background-color: #303030;
                             left: 0;
                             display: block;
 
@@ -429,7 +448,7 @@ a:visited {
                                 height: 1px;
                                 top: 2.4px;
                                 right: 23px;
-                                background-color: #000000;
+                                background-color: #303030;
                                 transform: rotate(45deg);
                             }
 
@@ -440,7 +459,7 @@ a:visited {
                                 height: 1px;
                                 top: -2.4px;
                                 right: 23px;
-                                background-color: #000000;
+                                background-color: #303030;
                                 transform: rotate(-45deg);
                             }
                         }
@@ -561,7 +580,7 @@ a:visited {
                     position: relative;
                     width: 30px;
                     height: 1px;
-                    background-color: #000000;
+                    background-color: #303030;
                     left: 0;
                     display: block;
 
@@ -572,7 +591,7 @@ a:visited {
                         height: 1px;
                         top: 2.4px;
                         right: -1px;
-                        background-color: #000000;
+                        background-color: #303030;
                         transform: rotate(-45deg);
                     }
 
@@ -583,7 +602,7 @@ a:visited {
                         height: 1px;
                         top: -2.4px;
                         right: -1px;
-                        background-color: #000000;
+                        background-color: #303030;
                         transform: rotate(45deg);
                     }
                 }
@@ -600,7 +619,7 @@ a:visited {
                     position: relative;
                     width: 30px;
                     height: 1px;
-                    background-color: #000000;
+                    background-color: #303030;
                     left: 0;
                     display: block;
 
@@ -611,7 +630,7 @@ a:visited {
                         height: 1px;
                         top: 2.4px;
                         right: 23px;
-                        background-color: #000000;
+                        background-color: #303030;
                         transform: rotate(45deg);
                     }
 
@@ -622,7 +641,7 @@ a:visited {
                         height: 1px;
                         top: -2.4px;
                         right: 23px;
-                        background-color: #000000;
+                        background-color: #303030;
                         transform: rotate(-45deg);
                     }
                 }
@@ -679,17 +698,23 @@ a:visited {
             align-items: center;
 
             input {
-                background-color: darkgray;
-                color: #FFFFFF;
+                background-color: rgba(28, 28, 28, 0);
+                color: #303030;
                 border: none;
+                border-bottom: 1px solid #303030;
                 margin-bottom: 5px;
 
                 &:focus {
                     outline: none;
                 }
+
             }
 
             .clients-content-consultation-form__button {
+                border: 1px solid #303030;
+                padding: 5px;
+                border-radius: 10%;
+
                 &:hover {
                     background-color: #A9A32A;
                 }
