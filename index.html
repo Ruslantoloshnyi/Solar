@@ -28,11 +28,11 @@
                 <p class="header-show-form_text">Записаться на консультацию</p>
             </div>
 
-            <div class="header-consultation-form">
+            <form class="header-consultation-form" action="" method="POST">
                 <input class="header-consultation-form__input" type="text" name="name" placeholder="Имя">
                 <input class="header-consultation-form__input" type="text" name="phone" placeholder="Телефон">
                 <input class="header-consultation-form__button" type="button" value="Записаться">
-            </div>
+            </form>
 
             <div class="header-socials">
                 <a href="#"><img class="header-socials_inst" src="./assets/image/instagram.png" alt=""></a>
@@ -247,13 +247,13 @@
                             <button class="clients-content-show-form__button">&#8594;</button>
                             <p class="clients-content-show-form__text">Записаться на консультацию</p>
                         </div>
-                        <div class="clients-content-consultation-form">
+                        <form class="clients-content-consultation-form" action="" method="POST">
                             <input class="clients-content-consultation-form__input" type="text" name="name"
                                 placeholder="Имя">
                             <input class="clients-content-consultation-form__input" type="text" name="phone"
                                 placeholder="Телефон">
                             <input class="clients-content-consultation-form__button" type="button" value="Записаться">
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -302,6 +302,51 @@
             </div>
         </div>
     </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="wrapper">
+                <div class="footer-block">
+                    <div class="footer-form">
+                        <div class="footer__head">ОСТАВИТЬ ЗАЯВКУ</div>
+                        <form class="footer-form__fields" action="">
+                            <input type="text" name="footer-name" placeholder="Имя">
+                            <input type="text" name="footer-phone" placeholder="Телефон">
+                            <div class="footer-form__fields-button">
+                                <button>&#8594;</button>                               
+                                <p>оставить заявку</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footer-contacts">
+                        <div class="footer__head">КОНТАКТЫ</div>
+                        <div>Центральный офис:<br>
+                            г. Москва, ул,Гоголя 13, 1й этаж
+                        </div>
+                        <div>Представительство в Киеве:<br>
+                            г. Киев, ул. Є. Коновальця, 103 оф. 410
+                        </div>
+                        <div>Представительства в Харькове, Одессе, Ростове, Сочи, Белгороде</div>
+                        <div>+7 987 654-54-56<br>
+                            +38 067 504-32-57
+                        </div>
+                        <div>Ежедневно 08:00 - 20:00</div>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="#">Политика конфиденциальности</a>
+                    <div>SOLAR EXE</div>
+                    <div class="footer-social__image">
+                        <img src="./assets/image/instagram.png" alt="">
+                        <img src="./assets/image/telegram.png" alt="">
+                        <img src="./assets/image/whatsapp.png" alt="">
+                        <img src="./assets/image/facebook.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
 </body>

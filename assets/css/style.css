@@ -12,6 +12,10 @@ a:visited {
   height: 100%;
   padding-left: 10%;
   padding-right: 10%; }
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 5%;
+      padding-right: 5%; } }
 
 .wrapper {
   margin-top: 150px; }
@@ -69,7 +73,7 @@ a:visited {
   color: #FFFFFF;
   margin: 30px 0px 30px 0px; }
   .header-show-form .header-show-form__button {
-    padding: 20px;
+    padding: 30px;
     border: solid 1px;
     border-radius: 50%;
     background-color: rgba(28, 28, 28, 0);
@@ -509,5 +513,128 @@ a:visited {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+
+.footer {
+  background-image: url("../image/footer-bg.jpg");
+  background-size: cover; }
+
+.footer__head {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  margin-top: 50px;
+  color: #FFFFFF; }
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  @media (max-width: 600px) {
+    .footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  .footer-block .footer-form {
+    display: flex;
+    flex-direction: column;
+    width: 47%; }
+    @media (max-width: 600px) {
+      .footer-block .footer-form {
+        width: 100%;
+        align-items: center; } }
+    .footer-block .footer-form .footer-form__fields {
+      display: flex;
+      flex-direction: column;
+      width: 80%; }
+      .footer-block .footer-form .footer-form__fields input {
+        background-color: rgba(28, 28, 28, 0);
+        border: none;
+        border-bottom: 1px solid #FFFFFF;
+        margin-top: 50px;
+        height: 40px;
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 19px;
+        color: #FFFFFF; }
+        .footer-block .footer-form .footer-form__fields input:focus {
+          outline: none; }
+      .footer-block .footer-form .footer-form__fields button {
+        border: solid 1px;
+        border-radius: 50%;
+        background-color: rgba(28, 28, 28, 0);
+        color: #FFFFFF;
+        margin-right: -15px;
+        padding: 30px; }
+        .footer-block .footer-form .footer-form__fields button:hover {
+          background-color: #A9A32A; }
+      .footer-block .footer-form .footer-form__fields .footer-form__fields-button {
+        display: flex;
+        margin-top: 50px;
+        align-items: center; }
+        .footer-block .footer-form .footer-form__fields .footer-form__fields-button p {
+          font-family: 'Noto Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          color: #FFFFFF; }
+  .footer-block .footer-contacts {
+    width: 47%;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF; }
+    @media (max-width: 600px) {
+      .footer-block .footer-contacts {
+        width: 100%;
+        text-align: center; } }
+    .footer-block .footer-contacts div {
+      margin-bottom: 20px; }
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px; }
+  @media (max-width: 600px) {
+    .footer-social {
+      display: flex;
+      flex-direction: column; } }
+  .footer-social a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF; }
+    @media (max-width: 600px) {
+      .footer-social a {
+        font-size: 18px;
+        margin-top: 20px; } }
+  .footer-social div {
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #FFFFFF; }
+    @media (max-width: 768px) {
+      .footer-social div {
+        font-size: 22px; } }
+    @media (max-width: 600px) {
+      .footer-social div {
+        font-size: 32px;
+        margin-top: 20px; } }
+  .footer-social .footer-social__image {
+    display: flex;
+    justify-content: space-between; }
+    .footer-social .footer-social__image img {
+      padding-right: 15px; }
 
 /*# sourceMappingURL=style.css.map */
