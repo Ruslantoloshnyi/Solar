@@ -200,6 +200,8 @@ a:visited {
       @media (max-width: 480px) {
         .green-tariff-subhead .green-tariff__link p {
           font-size: 16px; } }
+    .green-tariff-subhead .green-tariff__link .underline {
+      text-decoration: underline; }
   .green-tariff-subhead .green-tariff__text {
     margin-bottom: 15px;
     font-weight: 700;
