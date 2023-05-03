@@ -112,6 +112,12 @@ a:visited {
     .header-consultation-form .header-consultation-form__button:hover {
       background-color: #A9A32A; }
 
+.header-consultation_successfully {
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: center; }
+
 .header-socials {
   display: flex;
   justify-content: center;
