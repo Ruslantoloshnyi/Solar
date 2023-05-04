@@ -102,6 +102,10 @@ a:visited {
     }
 }
 
+.active {
+    display: block;
+}
+
 // header style
 .header {
     background-image: url("../image/background.jpg");
@@ -389,6 +393,10 @@ a:visited {
                 justify-content: space-between;
                 @include font_text();
                 width: 47%;
+
+                p {
+                    display: none;
+                }
 
                 .green-tariff-slider__arrow {
                     display: flex;

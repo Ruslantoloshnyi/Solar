@@ -26,6 +26,9 @@ a:visited {
     .wrapper {
       margin-top: 70px; } }
 
+.active {
+  display: block; }
+
 .header {
   background-image: url("../image/background.jpg");
   background-size: cover;
@@ -246,6 +249,8 @@ a:visited {
         font-size: 14px;
         line-height: 19px;
         width: 47%; }
+        .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text p {
+          display: none; }
         .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow {
           display: flex;
           justify-content: space-evenly;
