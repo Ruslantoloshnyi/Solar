@@ -6,6 +6,10 @@ const headerSuccessfully = document.querySelector('.header-consultation_successf
 const headerConsultationFormButton = document.querySelector('.header-consultation-form__button');
 const greenTariffLink = document.querySelector('.green-tariff__link');
 const greenTariffContentBlocks = document.querySelectorAll('.green-tariff-content-block');
+const clientsContentShowFormButton = document.querySelector('.clients-content-show-form__button');
+const clientsContentForm = document.querySelector('.clients-content-consultation-form');
+const clientsConsultationFormButton =document.querySelector('.clients-content-consultation-form__button');
+const clientsContentSuccessfully = document.querySelector('.clients-content_successfully');
 
 // Select content relative to links on green tariff section
 function green_tariff_decoration() {
@@ -32,27 +36,34 @@ function green_tariff_decoration() {
     }
 };
 
-// Show or hide consultation form on click
-showFormButton.addEventListener('click', function () {
-    if (headerConsultationForm.style.display == 'none') {
-        headerConsultationForm.style.display = 'flex';
-    } else {
-        headerConsultationForm.style.display = 'none';
-    }
-});
+// Show consultation form function
+function show_form (button, form) {
+    button.addEventListener('click', function() {
+        if (form.style.display == 'none') {
+            form.style.display = 'flex';
+        } else {
+            form.style.display = 'none'
+        }
+    })
+};
 
-// Hide consultation form and show header consulation soccessfully on click
-headerConsultationFormButton.addEventListener('click', function () {
-    headerConsultationForm.style.display = 'none';
-    headerSuccessfully.style.display = 'block';
+// Hide consultation form and show consultation successfully on click function
+function consultation_successfully(button, form, successfully) {
+    button.addEventListener('click', function() {
+        form.style.display = 'none';
+        successfully.style.display = 'block';
 
-    //Register time out 10 sec
-    setTimeout(function () {
-        headerSuccessfully.style.display = 'none';
-    }, 10000)
-});
+        setTimeout(function () {
+            successfully.style.display = 'none';
+        }, 10000)
+    })
+};
 
 let firstChild = greenTariffLink.children;
 firstChild[0].classList.add('underline');
 
 green_tariff_decoration();
+show_form(showFormButton, headerConsultationForm);
+show_form(clientsContentShowFormButton, clientsContentForm);
+consultation_successfully(headerConsultationFormButton, headerConsultationForm, headerSuccessfully);
+consultation_successfully(clientsConsultationFormButton, clientsContentForm, clientsContentSuccessfully);

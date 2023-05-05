@@ -493,6 +493,9 @@ a:visited {
       .clients-section-block .clients-content .clients-content-show-form .clients-content-show-form__text {
         font-weight: 400;
         font-size: 14px; }
+    .clients-section-block .clients-content .clients-content_successfully {
+      font-weight: 400;
+      font-size: 14px; }
     .clients-section-block .clients-content .clients-content-consultation-form {
       display: flex;
       flex-direction: column;
