@@ -573,15 +573,29 @@ a:visited {
         display: flex;
         flex-direction: column;
         width: 47%;
+        overflow: hidden;
 
         @include _979() {
             width: 100%;
         }
 
         .clients-slider__image {
-            img {
-                @include img_cover();
+            display: flex;
+            flex-wrap: nowrap;
+
+            .clients-slide {
+                display: none;
+                flex: 0 0 100%;
+
+                img {
+                    @include img_cover();
+                }
             }
+
+            .active {
+                display: block;
+            }
+
         }
 
         .clients-slider__arrow {
@@ -681,13 +695,19 @@ a:visited {
             margin-top: 10px;
         }
 
-        .clients-content__head {
-            @include font_head();
+        .clients-content-slider {
+            display: none;
+
+            .clients-content__head {
+                @include font_head();
+            }
+
+            .clients-content__text {
+                @include font_text();
+            }
         }
 
-        .clients-content__text {
-            @include font_text();
-        }
+
 
         .clients-content-show-form {
             display: flex;

@@ -380,14 +380,23 @@ a:visited {
   .clients-section-block .clietns-slider {
     display: flex;
     flex-direction: column;
-    width: 47%; }
+    width: 47%;
+    overflow: hidden; }
     @media (max-width: 979px) {
       .clients-section-block .clietns-slider {
         width: 100%; } }
-    .clients-section-block .clietns-slider .clients-slider__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    .clients-section-block .clietns-slider .clients-slider__image {
+      display: flex;
+      flex-wrap: nowrap; }
+      .clients-section-block .clietns-slider .clients-slider__image .clients-slide {
+        display: none;
+        flex: 0 0 100%; }
+        .clients-section-block .clietns-slider .clients-slider__image .clients-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .clients-section-block .clietns-slider .clients-slider__image .active {
+        display: block; }
     .clients-section-block .clietns-slider .clients-slider__arrow {
       display: flex;
       justify-content: space-evenly;
@@ -466,15 +475,17 @@ a:visited {
       .clients-section-block .clients-content {
         width: 100%;
         margin-top: 10px; } }
-    .clients-section-block .clients-content .clients-content__head {
-      margin-bottom: 15px;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 25px; }
-    .clients-section-block .clients-content .clients-content__text {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 19px; }
+    .clients-section-block .clients-content .clients-content-slider {
+      display: none; }
+      .clients-section-block .clients-content .clients-content-slider .clients-content__head {
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px; }
+      .clients-section-block .clients-content .clients-content-slider .clients-content__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px; }
     .clients-section-block .clients-content .clients-content-show-form {
       display: flex;
       justify-content: flex-start;
