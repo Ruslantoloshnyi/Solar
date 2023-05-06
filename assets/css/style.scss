@@ -83,6 +83,7 @@ a:visited {
     height: 100%;
     padding-left: 10%;
     padding-right: 10%;
+    margin: 0 auto;
 
     @include _768() {
         padding-left: 5%;
@@ -854,6 +855,16 @@ a:visited {
         @include _600() {
             width: 100%;
             align-items: center;
+        }
+
+        .footer_successfully {
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-top: 100px;
         }
 
         .footer-form__fields {

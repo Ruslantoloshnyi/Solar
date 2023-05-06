@@ -11,7 +11,8 @@ a:visited {
   max-width: 1200px;
   height: 100%;
   padding-left: 10%;
-  padding-right: 10%; }
+  padding-right: 10%;
+  margin: 0 auto; }
   @media (max-width: 768px) {
     .container {
       padding-left: 5%;
@@ -592,6 +593,14 @@ a:visited {
       .footer-block .footer-form {
         width: 100%;
         align-items: center; } }
+    .footer-block .footer-form .footer_successfully {
+      font-family: 'Noto Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: #FFFFFF;
+      margin-top: 100px; }
     .footer-block .footer-form .footer-form__fields {
       display: flex;
       flex-direction: column;

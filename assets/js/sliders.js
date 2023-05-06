@@ -50,8 +50,11 @@ const clientsSliderRightArrow = clientsSlider.querySelector('.arrow_right-pointe
 const clientsSliderLeftArrow = clientsSlider.querySelector('.arrow_left-pointer');
 const clientsContentsSlider = document.querySelectorAll('.clients-content-slider');
 
+// Initial index
 let clSliderIndex = 0;
 
+
+// Show clients slider function
 function show_cl_slide(index) {
     clientsSlides[clSliderIndex].style.display = 'none';
     clientsContentsSlider[clSliderIndex].style.display = 'none';
@@ -60,6 +63,7 @@ function show_cl_slide(index) {
     clSliderIndex = index;
 };
 
+// Event listener click to left arrow
 clientsSliderLeftArrow.addEventListener('click', function() {
     let index = clSliderIndex - 1;
     if (index < 0) {
@@ -68,6 +72,7 @@ clientsSliderLeftArrow.addEventListener('click', function() {
     show_cl_slide(index);
 });
 
+// Event listener click to right arrow
 clientsSliderRightArrow.addEventListener('click', function() {   
     let index = clSliderIndex + 1;
     if (index >= clientsSlides.length) {

@@ -8,8 +8,11 @@ const greenTariffLink = document.querySelector('.green-tariff__link');
 const greenTariffContentBlocks = document.querySelectorAll('.green-tariff-content-block');
 const clientsContentShowFormButton = document.querySelector('.clients-content-show-form__button');
 const clientsContentForm = document.querySelector('.clients-content-consultation-form');
-const clientsConsultationFormButton =document.querySelector('.clients-content-consultation-form__button');
+const clientsConsultationFormButton = document.querySelector('.clients-content-consultation-form__button');
 const clientsContentSuccessfully = document.querySelector('.clients-content_successfully');
+const footerButton = document.querySelector('.footer-form__fields-button button');
+const footerForm = document.querySelector('.footer-form__fields');
+const footerSuccessfully = document.querySelector('.footer_successfully');
 
 // Select content relative to links on green tariff section
 function green_tariff_decoration() {
@@ -37,8 +40,8 @@ function green_tariff_decoration() {
 };
 
 // Show consultation form function
-function show_form (button, form) {
-    button.addEventListener('click', function() {
+function show_form(button, form) {
+    button.addEventListener('click', function () {
         if (form.style.display == 'none') {
             form.style.display = 'flex';
         } else {
@@ -49,13 +52,22 @@ function show_form (button, form) {
 
 // Hide consultation form and show consultation successfully on click function
 function consultation_successfully(button, form, successfully) {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         form.style.display = 'none';
         successfully.style.display = 'block';
 
         setTimeout(function () {
             successfully.style.display = 'none';
         }, 10000)
+    })
+};
+
+// Hide footer form on click function
+function footer_hide_form() {
+    footerButton.addEventListener('click', function (event) {
+        footerForm.style.display = 'none';
+        footerSuccessfully.style.display = 'block';
+        event.preventDefault();
     })
 };
 
@@ -67,3 +79,6 @@ show_form(showFormButton, headerConsultationForm);
 show_form(clientsContentShowFormButton, clientsContentForm);
 consultation_successfully(headerConsultationFormButton, headerConsultationForm, headerSuccessfully);
 consultation_successfully(clientsConsultationFormButton, clientsContentForm, clientsContentSuccessfully);
+footer_hide_form();
+
+
