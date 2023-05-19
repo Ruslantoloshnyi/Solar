@@ -202,6 +202,8 @@ a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 
     input {
         background-color: rgba(28, 28, 28, 0);
@@ -235,6 +237,8 @@ a:visited {
     font-size: 14px;
     color: #FFFFFF;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .header-socials {
@@ -713,7 +717,7 @@ a:visited {
         .clients-content-show-form {
             display: flex;
             justify-content: flex-start;
-            align-items: center;
+            align-items: center;            
             color: #303030;
             margin: 30px 0px 30px 0px;
 
@@ -739,12 +743,16 @@ a:visited {
         .clients-content_successfully {
             font-weight: 400;
             font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .clients-content-consultation-form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
 
             input {
                 background-color: rgba(28, 28, 28, 0);
@@ -865,6 +873,8 @@ a:visited {
             line-height: 25px;
             color: #FFFFFF;
             margin-top: 100px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .footer-form__fields {

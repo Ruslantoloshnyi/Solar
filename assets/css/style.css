@@ -98,7 +98,9 @@ a:visited {
 .header-consultation-form {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; }
   .header-consultation-form input {
     background-color: rgba(28, 28, 28, 0);
     color: #FFFFFF;
@@ -120,7 +122,9 @@ a:visited {
   font-weight: 400;
   font-size: 14px;
   color: #FFFFFF;
-  text-align: center; }
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; }
 
 .header-socials {
   display: flex;
@@ -507,11 +511,15 @@ a:visited {
         font-size: 14px; }
     .clients-section-block .clients-content .clients-content_successfully {
       font-weight: 400;
-      font-size: 14px; }
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; }
     .clients-section-block .clients-content .clients-content-consultation-form {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; }
       .clients-section-block .clients-content .clients-content-consultation-form input {
         background-color: rgba(28, 28, 28, 0);
         color: #303030;
@@ -600,7 +608,9 @@ a:visited {
       font-size: 18px;
       line-height: 25px;
       color: #FFFFFF;
-      margin-top: 100px; }
+      margin-top: 100px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; }
     .footer-block .footer-form .footer-form__fields {
       display: flex;
       flex-direction: column;

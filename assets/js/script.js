@@ -42,11 +42,18 @@ function green_tariff_decoration() {
 // Show consultation form function
 function show_form(button, form) {
     button.addEventListener('click', function () {
-        if (form.style.display == 'none') {
+        if (form.style.display == 'none') {            
             form.style.display = 'flex';
+            setTimeout(() => {
+                form.style.opacity = '1';
+            }, 100);
+            
         } else {
             form.style.display = 'none'
-        }
+            setTimeout(() => {
+                form.style.opacity = '0';
+            }, 100);
+        }         
     })
 };
 
@@ -55,9 +62,12 @@ function consultation_successfully(button, form, successfully) {
     button.addEventListener('click', function () {
         form.style.display = 'none';
         successfully.style.display = 'block';
+        setTimeout(() => {
+            successfully.style.opacity = '1'
+        }, 100);
 
-        setTimeout(function () {
-            successfully.style.display = 'none';
+        setTimeout(function () {            
+            successfully.style.opacity = '0';
         }, 10000)
     })
 };
@@ -67,6 +77,9 @@ function footer_hide_form() {
     footerButton.addEventListener('click', function (event) {
         footerForm.style.display = 'none';
         footerSuccessfully.style.display = 'block';
+        setTimeout(() => {
+            footerSuccessfully.style.opacity = '1';
+        }, 100);
         event.preventDefault();
     })
 };
@@ -80,5 +93,6 @@ show_form(clientsContentShowFormButton, clientsContentForm);
 consultation_successfully(headerConsultationFormButton, headerConsultationForm, headerSuccessfully);
 consultation_successfully(clientsConsultationFormButton, clientsContentForm, clientsContentSuccessfully);
 footer_hide_form();
+
 
 
