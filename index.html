@@ -29,13 +29,15 @@
             </div>
 
             <form class="header-consultation-form" style="display: none;" action="" method="POST">
-                <input class="header-consultation-form__input" type="text" name="name" placeholder="Имя">
-                <input class="header-consultation-form__input" type="text" name="phone" placeholder="Телефон">
+                <input class="header-consultation-form__input" type="text" name="name" placeholder="Имя" required>
+                <input class="header-consultation-form__input" type="text" name="phone" placeholder="Телефон" required>
                 <input class="header-consultation-form__button" type="button" value="Записаться">
             </form>
 
             <div class="header-consultation_successfully" style="display: none;">Спасибо, мы перезвоним Вам в ближайшее
                 время.</div>
+            <div class="header-consultation_successfully__phone" style="display: none;">Пожалуйста введите телефон</div>
+            <div class="header-consultation_successfully__name" style="display: none;">Пожалуйста введите Имя</div>
 
             <div class="header-socials">
                 <a href="#"><img class="header-socials_inst" src="./assets/image/instagram.png" alt=""></a>
@@ -420,7 +422,8 @@
                 <div class="footer-block">
                     <div class="footer-form">
                         <div class="footer__head">ОСТАВИТЬ ЗАЯВКУ</div>
-                        <div class="footer_successfully" style="display: none;">Спасибо, мы свяжемся с вами в ближайшее время</div>
+                        <div class="footer_successfully" style="display: none;">Спасибо, мы свяжемся с вами в ближайшее
+                            время</div>
                         <form class="footer-form__fields" action="" method="POST">
                             <input type="text" name="footer-name" placeholder="Имя">
                             <input type="text" name="footer-phone" placeholder="Телефон">

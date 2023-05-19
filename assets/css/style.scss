@@ -241,6 +241,24 @@ a:visited {
     transition: opacity 0.5s ease-in-out;
 }
 
+.header-consultation_successfully__phone {
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header-consultation_successfully__name {
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .header-socials {
     display: flex;
     justify-content: center;

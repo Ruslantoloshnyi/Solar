@@ -13,6 +13,8 @@ const clientsContentSuccessfully = document.querySelector('.clients-content_succ
 const footerButton = document.querySelector('.footer-form__fields-button button');
 const footerForm = document.querySelector('.footer-form__fields');
 const footerSuccessfully = document.querySelector('.footer_successfully');
+const headerInputName = document.querySelector('.header-consultation-form__input[name="name"]');
+const headerInputPhone = document.querySelector('.header-consultation-form__input[name="phone"]');
 
 // Select content relative to links on green tariff section
 function green_tariff_decoration() {
@@ -42,33 +44,55 @@ function green_tariff_decoration() {
 // Show consultation form function
 function show_form(button, form) {
     button.addEventListener('click', function () {
-        if (form.style.display == 'none') {            
+        if (form.style.display == 'none') {
             form.style.display = 'flex';
             setTimeout(() => {
                 form.style.opacity = '1';
             }, 100);
-            
+
         } else {
             form.style.display = 'none'
             setTimeout(() => {
                 form.style.opacity = '0';
             }, 100);
-        }         
+        }
     })
 };
+
+const headerSuccessfullyPhone = document.querySelector('.header-consultation_successfully__phone');
+const headerSuccessfullyName = document.querySelector('.header-consultation_successfully__name');
 
 // Hide consultation form and show consultation successfully on click function
 function consultation_successfully(button, form, successfully) {
     button.addEventListener('click', function () {
-        form.style.display = 'none';
-        successfully.style.display = 'block';
-        setTimeout(() => {
-            successfully.style.opacity = '1'
-        }, 100);
+        if (headerInputName.value.trim() === '') { // check input name for empty
+            headerSuccessfullyName.style.display = 'block'
+            setTimeout(() => {
+                headerSuccessfullyName.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                headerSuccessfullyName.style.opacity = '0';
+            }, 3000);
+            
+        } else if (headerInputPhone.value.trim() === '') { // check input phone for empty
+            headerSuccessfullyPhone.style.display = 'block'
+            setTimeout(() => {
+                headerSuccessfullyPhone.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                headerSuccessfullyPhone.style.opacity = '0';
+            }, 3000);
+        } else {
+            form.style.display = 'none';
+            successfully.style.display = 'block';
+            setTimeout(() => {
+                successfully.style.opacity = '1'
+            }, 100);
 
-        setTimeout(function () {            
-            successfully.style.opacity = '0';
-        }, 10000)
+            setTimeout(function () {
+                successfully.style.opacity = '0';
+            }, 10000)
+        }
     })
 };
 
