@@ -31,8 +31,15 @@ function green_tariff_decoration() {
 
                 if (block.dataset.linknum == linkNum) {
                     block.style.display = 'block';
+                    block.style.opacity = '0';
+                    setTimeout(() => {
+                        block.style.transition = 'opacity 0.3s ease-in-out'
+                        block.style.opacity = '1';
+                    }, 30);
+                    
                 } else {
                     block.style.display = 'none';
+                    block.style.opacity = '0';
                 }
             }
         })
@@ -176,7 +183,6 @@ function footer_hide_form() {
         event.preventDefault();
     })
 };
-
 footer_hide_form();
 
 let firstChild = greenTariffLink.children;
