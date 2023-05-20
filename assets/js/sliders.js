@@ -14,13 +14,20 @@ let gtSliderIndex = 0;
 
 //Slide show function
 function show_gt_slide(index) {
-    greenTariffSlides[gtSliderIndex].style.display = 'none';
-    greenTariffSlides[index].style.display = 'block';
-    gtSliderIndex = index;
+    greenTariffSlides[gtSliderIndex].style.opacity = '0';
+    setTimeout(() => {
+        greenTariffSlides[gtSliderIndex].style.display = 'none';
+        gtSliderIndex = index;
+        greenTariffSlides[index].style.display = 'block';
+    
+        setTimeout(() => {
+          greenTariffSlides[index].style.opacity = '1';
+        }, 50);
+      }, 100);
 };
 
 //add click event listener to lef arrow
-greenTariffSliderArrowLeft.addEventListener('click', function () {    
+greenTariffSliderArrowLeft.addEventListener('click', function () {
     let index = gtSliderIndex - 1;
     if (index < 0) {
         index = greenTariffSlides.length - 1;
@@ -30,7 +37,7 @@ greenTariffSliderArrowLeft.addEventListener('click', function () {
 });
 
 //add click event listener to right arrow
-greenTariffSliderArrowRight.addEventListener('click', function() {    
+greenTariffSliderArrowRight.addEventListener('click', function () {
     let index = gtSliderIndex + 1;
     if (index >= greenTariffSlides.length) {
         index = 0;
@@ -64,7 +71,7 @@ function show_cl_slide(index) {
 };
 
 // Event listener click to left arrow
-clientsSliderLeftArrow.addEventListener('click', function() {
+clientsSliderLeftArrow.addEventListener('click', function () {
     let index = clSliderIndex - 1;
     if (index < 0) {
         index = clientsSlides.length - 1;
@@ -73,7 +80,7 @@ clientsSliderLeftArrow.addEventListener('click', function() {
 });
 
 // Event listener click to right arrow
-clientsSliderRightArrow.addEventListener('click', function() {   
+clientsSliderRightArrow.addEventListener('click', function () {
     let index = clSliderIndex + 1;
     if (index >= clientsSlides.length) {
         index = 0;

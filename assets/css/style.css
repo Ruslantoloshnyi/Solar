@@ -273,7 +273,9 @@ a:visited {
         line-height: 19px;
         width: 47%; }
         .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text p {
-          display: none; }
+          display: none;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out; }
         .green-tariff-content .green-tariff-content-block .green-tariff-content-slider .green-tariff-content-slider__text .green-tariff-slider__arrow {
           display: flex;
           justify-content: space-evenly;
