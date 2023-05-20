@@ -138,51 +138,46 @@ function clientsForm () {
 
 clientsForm();
 
-// Hide consultation form and show consultation successfully on click function
-function consultation_successfully(button, form, successfully) {
-    clientsConsultationFormButton.addEventListener('click', function () {
-        if (headerInputName.value.trim() === '') { // check input name for empty
-            headerSuccessfullyName.style.display = 'block'
-            setTimeout(() => {
-                headerSuccessfullyName.style.opacity = '1';
-            }, 100);
-            setTimeout(() => {
-                headerSuccessfullyName.style.opacity = '0';
-            }, 3000);
-
-        } else if (headerInputPhone.value.trim() === '') { // check input phone for empty
-            headerSuccessfullyPhone.style.display = 'block'
-            setTimeout(() => {
-                headerSuccessfullyPhone.style.opacity = '1';
-            }, 100);
-            setTimeout(() => {
-                headerSuccessfullyPhone.style.opacity = '0';
-            }, 3000);
-        } else {
-            form.style.display = 'none';
-            successfully.style.display = 'block';
-            setTimeout(() => {
-                successfully.style.opacity = '1'
-            }, 100);
-
-            setTimeout(function () {
-                successfully.style.opacity = '0';
-            }, 10000)
-        }
-    })
-};
+const footerInputName = document.querySelector('input[name="footer-name"]');
+const footerInputPhone = document.querySelector('input[name="footer-phone"]');
+const footerSuccessfullyName = document.querySelector('.footer_successfully__name');
+const footerSuccessfullyPhone = document.querySelector('.footer_successfully__phone'); 
 
 // Hide footer form on click function
 function footer_hide_form() {
     footerButton.addEventListener('click', function (event) {
-        footerForm.style.display = 'none';
-        footerSuccessfully.style.display = 'block';
-        setTimeout(() => {
-            footerSuccessfully.style.opacity = '1';
-        }, 100);
+        if (footerInputName.value.trim() === '') { // check input name for empty
+            footerSuccessfullyName.style.display = 'block'
+            setTimeout(() => {
+                footerSuccessfullyName.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                footerSuccessfullyName.style.opacity = '0';
+                footerSuccessfullyName.style.display = 'none'
+            }, 3000);
+
+        } else if (footerInputPhone.value.trim() === '') { // check input phone for empty
+            footerSuccessfullyPhone.style.display = 'block'
+            setTimeout(() => {
+                footerSuccessfullyPhone.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                footerSuccessfullyPhone.style.opacity = '0';
+                footerSuccessfullyPhone.style.display = 'none'
+            }, 3000);
+        } else {
+            footerForm.style.display = 'none';
+            footerSuccessfully.style.display = 'block';
+            setTimeout(() => {
+                footerSuccessfully.style.opacity = '1';
+            }, 100);
+        }
+        
         event.preventDefault();
     })
 };
+
+footer_hide_form();
 
 let firstChild = greenTariffLink.children;
 firstChild[0].classList.add('underline');
@@ -190,7 +185,7 @@ firstChild[0].classList.add('underline');
 green_tariff_decoration();
 show_form(showFormButton, headerConsultationForm);
 show_form(clientsContentShowFormButton, clientsContentForm);
-footer_hide_form();
+
 
 
 

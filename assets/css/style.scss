@@ -907,7 +907,31 @@ a:visited {
             margin-top: 100px;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
+        } 
+        
+        .footer_successfully__name {
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-top: 100px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
+        
+        .footer_successfully__phone {
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-top: 100px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }    
 
         .footer-form__fields {
             display: flex;
