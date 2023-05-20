@@ -765,6 +765,20 @@ a:visited {
             transition: opacity 0.5s ease-in-out;
         }
 
+        .clients-content_successfully__name {
+            font-weight: 400;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .clients-content_successfully__phone {
+            font-weight: 400;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
         .clients-content-consultation-form {
             display: flex;
             flex-direction: column;

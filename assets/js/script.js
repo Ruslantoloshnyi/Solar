@@ -13,8 +13,6 @@ const clientsContentSuccessfully = document.querySelector('.clients-content_succ
 const footerButton = document.querySelector('.footer-form__fields-button button');
 const footerForm = document.querySelector('.footer-form__fields');
 const footerSuccessfully = document.querySelector('.footer_successfully');
-const headerInputName = document.querySelector('.header-consultation-form__input[name="name"]');
-const headerInputPhone = document.querySelector('.header-consultation-form__input[name="phone"]');
 
 // Select content relative to links on green tariff section
 function green_tariff_decoration() {
@@ -61,10 +59,12 @@ function show_form(button, form) {
 
 const headerSuccessfullyPhone = document.querySelector('.header-consultation_successfully__phone');
 const headerSuccessfullyName = document.querySelector('.header-consultation_successfully__name');
+const headerInputName = document.querySelector('.header-consultation-form__input[name="name"]');
+const headerInputPhone = document.querySelector('.header-consultation-form__input[name="phone"]');
 
-// Hide consultation form and show consultation successfully on click function
-function consultation_successfully(button, form, successfully) {
-    button.addEventListener('click', function () {
+// add check and animation into header form
+function headerForm() {
+    headerConsultationFormButton.addEventListener('click', function () {
         if (headerInputName.value.trim() === '') { // check input name for empty
             headerSuccessfullyName.style.display = 'block'
             setTimeout(() => {
@@ -73,7 +73,83 @@ function consultation_successfully(button, form, successfully) {
             setTimeout(() => {
                 headerSuccessfullyName.style.opacity = '0';
             }, 3000);
-            
+
+        } else if (headerInputPhone.value.trim() === '') { // check input phone for empty
+            headerSuccessfullyPhone.style.display = 'block'
+            setTimeout(() => {
+                headerSuccessfullyPhone.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                headerSuccessfullyPhone.style.opacity = '0';
+            }, 3000);
+        } else {
+            headerConsultationForm.style.display = 'none';
+            headerSuccessfully.style.display = 'block';
+            setTimeout(() => {
+                headerSuccessfully.style.opacity = '1'
+            }, 100);
+
+            setTimeout(function () {
+                headerSuccessfully.style.opacity = '0';
+            }, 10000)
+        }
+    })
+};
+headerForm();
+
+const clientsSuccessfullyName = document.querySelector('.clients-content_successfully__name');
+const clientsSuccessfullyPhone = document.querySelector('.clients-content_successfully__phone');
+const clientsInputName = document.querySelector('.clients-content-consultation-form__input[name="name"]');
+const clientsInputPhone = document.querySelector('.clients-content-consultation-form__input[name="phone"]');
+
+// add check and animation into clients form
+function clientsForm () {
+    clientsConsultationFormButton.addEventListener('click', function () {
+        if (clientsInputName.value.trim() === '') { // check input name for empty
+            clientsSuccessfullyName.style.display = 'block'
+            setTimeout(() => {
+                clientsSuccessfullyName.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                clientsSuccessfullyName.style.opacity = '0';
+            }, 3000);
+
+        } else if (clientsInputPhone.value.trim() === '') { // check input phone for empty
+            clientsSuccessfullyPhone.style.display = 'block'
+            setTimeout(() => {
+                clientsSuccessfullyPhone.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                clientsSuccessfullyPhone.style.opacity = '0';
+            }, 3000);
+        } else {
+            clientsContentForm.style.display = 'none';
+            clientsContentSuccessfully.style.display = 'block';
+            setTimeout(() => {
+                clientsContentSuccessfully.style.opacity = '1'
+            }, 100);
+
+            setTimeout(function () {
+                clientsContentSuccessfully.style.opacity = '0';
+            }, 10000)
+        }
+    })
+};
+
+clientsForm();
+
+// Hide consultation form and show consultation successfully on click function
+function consultation_successfully(button, form, successfully) {
+    clientsConsultationFormButton.addEventListener('click', function () {
+        if (headerInputName.value.trim() === '') { // check input name for empty
+            headerSuccessfullyName.style.display = 'block'
+            setTimeout(() => {
+                headerSuccessfullyName.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                headerSuccessfullyName.style.opacity = '0';
+            }, 3000);
+
         } else if (headerInputPhone.value.trim() === '') { // check input phone for empty
             headerSuccessfullyPhone.style.display = 'block'
             setTimeout(() => {
@@ -114,8 +190,6 @@ firstChild[0].classList.add('underline');
 green_tariff_decoration();
 show_form(showFormButton, headerConsultationForm);
 show_form(clientsContentShowFormButton, clientsContentForm);
-consultation_successfully(headerConsultationFormButton, headerConsultationForm, headerSuccessfully);
-consultation_successfully(clientsConsultationFormButton, clientsContentForm, clientsContentSuccessfully);
 footer_hide_form();
 
 
