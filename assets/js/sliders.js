@@ -63,11 +63,23 @@ let clSliderIndex = 0;
 
 // Show clients slider function
 function show_cl_slide(index) {
+    clientsSlides[clSliderIndex].style.transition = 'opacity 0.3s ease-out';
+    clientsSlides[clSliderIndex].style.opacity = '0';
+    clientsContentsSlider[clSliderIndex].style.transition = 'opacity 0.3s ease-out';
+    clientsContentsSlider[clSliderIndex].style.opacity = '0';
+
+  setTimeout(() => {
     clientsSlides[clSliderIndex].style.display = 'none';
     clientsContentsSlider[clSliderIndex].style.display = 'none';
     clientsSlides[index].style.display = 'block';
+    clientsSlides[index].style.transition = 'opacity 0.3s ease-in';
+    clientsSlides[index].style.opacity = '1';
     clientsContentsSlider[index].style.display = 'block';
+    clientsContentsSlider[index].style.transition = 'opacity 0.3s ease-in';
+    clientsContentsSlider[index].style.opacity = '1';
+
     clSliderIndex = index;
+  }, 300);
 };
 
 // Event listener click to left arrow
